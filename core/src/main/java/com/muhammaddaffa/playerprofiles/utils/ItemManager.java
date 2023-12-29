@@ -67,7 +67,11 @@ public class ItemManager {
         // Add random enchant and hide enchant attributes if item set to glowing
         if(item.glowing()) builder.enchant(Enchantment.ARROW_DAMAGE).flags(ItemFlag.HIDE_ENCHANTS);
         // Check if the server is 1.14+ and try to add custom model data
-        if(Utils.hasCustomModelData()) builder.customModelData(item.customModelData());
+        if(Utils.hasCustomModelData()) {
+            assert builder != null;
+            builder.customModelData(item.customModelData());
+        }
+        assert builder != null;
         return builder.build();
     }
 

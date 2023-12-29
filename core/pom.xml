@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.muhammaddaffa</groupId>
         <artifactId>PlayerProfiles</artifactId>
-        <version>7.0.0</version>
+        <version>7.0.1</version>
     </parent>
 
     <artifactId>core</artifactId>
@@ -61,6 +61,11 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
+        <!-- SirBlobman Public Repository -->
+        <repository>
+            <id>sirblobman-public</id>
+            <url>https://nexus.sirblobman.xyz/public/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -86,23 +91,20 @@
             <groupId>com.github.sirblobman.api</groupId>
             <artifactId>core</artifactId>
             <version>2.9-SNAPSHOT</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/deps/BlueSlimeCore.jar</systemPath>
+            <scope>provided</scope>
         </dependency>
         <!-- CombatLogX API -->
         <dependency>
             <groupId>com.github.sirblobman.combatlogx</groupId>
             <artifactId>api</artifactId>
             <version>11.4-SNAPSHOT</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/deps/CombatLogX.jar</systemPath>
+            <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.deluxecombat</groupId>
-            <artifactId>deluxecombatapi</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/deps/DeluxeCombatAPI.jar</systemPath>
+            <groupId>com.github.timderspieler</groupId>
+            <artifactId>DeluxeCombat-API</artifactId>
+            <version>1.3.3</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>

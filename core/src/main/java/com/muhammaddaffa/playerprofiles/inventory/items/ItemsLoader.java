@@ -40,14 +40,14 @@ public class ItemsLoader {
             List<Integer> slots = config.getIntegerList(path + ".slots");
             boolean glowing = config.getBoolean(path + ".glowing");
             boolean hideAttributes = config.getBoolean(path + ".hideAttributes");
+            int customModelData = config.getInt(path + ".customModelData");
+            boolean onlyOwner = config.getBoolean(path + ".onlyOwner");
+            boolean onlyVisitor = config.getBoolean(path + ".onlyVisitor");
             boolean usePermission = config.getBoolean(path + ".usePermission");
             String permission = config.getString(path + ".permission");
             List<String> lore = config.getStringList(path + ".lore");
             List<String> leftCommands = config.getStringList(path + ".leftClickCommands");
             List<String> rightCommands = config.getStringList(path + ".rightClickCommands");
-            int customModelData = config.getInt(path + ".customModelData");
-            boolean onlyOwner = config.getBoolean(path + ".onlyOwner");
-            boolean onlyVisitor = config.getBoolean(path + ".onlyVisitor");
             // Finally add the item to the list
             GUIItem guiItem = new GUIItem(type, material, amount, name, slots, glowing, hideAttributes, usePermission,
                     permission, lore, leftCommands, rightCommands, customModelData, onlyOwner, onlyVisitor);
